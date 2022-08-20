@@ -1,3 +1,4 @@
+
 #Instruções do projeto
 #Desenvolva um código que utilize as seguintes características de um veículo:
 #-Quantidade de rodas;
@@ -16,11 +17,11 @@ quant_rodas= int(input("Digite a quantidade de rodas do veículo: "))
 peso_bruto_kg=float(input("Digite o peso bruto do veículo em kg: "))
 quant_pessoas=float(input("Digite a quantidade de pessoas no veículo: "))
 
-if quant_rodas <= 3:
+if quant_rodas == 3 or quant_rodas == 2:
     print("Categoria A. ")
-elif quant_rodas == 4 and quant_pessoas > 8 and peso_bruto_kg <= 3500:
+elif quant_rodas == 4 and quant_pessoas >= 8 and peso_bruto_kg <= 3500:
     print("Categoria B. ")
-elif quant_rodas == 4 and peso_bruto_kg < 3500 and peso_bruto_kg < 6000:
+elif quant_rodas >= 4 and peso_bruto_kg >= 3500 and peso_bruto_kg <= 6000:
     print("Categoria C. ")
 elif quant_rodas >= 4 and quant_pessoas > 8:
     print("Categoria D. ")
