@@ -9,4 +9,5 @@ print("Iniciando contagem regressiva: \n")
 for cont in range (10,0,-1):
     time.sleep(1)
     print(cont)
+time.sleep(1)
 print("\nBUM!")
