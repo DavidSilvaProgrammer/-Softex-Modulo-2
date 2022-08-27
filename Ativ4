@@ -13,14 +13,20 @@
 def calculadora (n1, n2, operacao):
     if operacao == "+":
         resultado=n1+n2
-    if operacao == "-":
+    elif operacao == "-":
         resultado=n1-n2
-    if operacao == "*":
+    elif operacao == "*":
         resultado=n1*n2
-    if operacao == "/":
+    elif operacao == "/":
         resultado=n1/n2
     else:
         resultado=0
     print(resultado)
     return resultado
+    
+calculadora(5,5,"+")
+calculadora(5,5,"-")
+calculadora(5,5,"*")
+calculadora(5,5,"/")
+calculadora(5,5,"a")
 
