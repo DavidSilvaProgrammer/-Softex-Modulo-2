@@ -1,0 +1,12 @@
+def aprovacao(nota1, nota2, nota3):
+    media=(nota1+nota2+nota3)/3
+    if (media>=7):
+        res="Aprovado"
+    else:
+        res="Reprovado"
+    print(res)
+    return res
+        
+aprovacao(7,7,7)
+
+
