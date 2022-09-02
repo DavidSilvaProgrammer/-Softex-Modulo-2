@@ -12,6 +12,10 @@ quant_operacao=0
 contador=1
 
 while operacao != 0:
+    contador=1
+    somatorio=0
+    n1=0
+    
     print("1 = Soma\n2 = Subtração\n3 = Multiplicação\n4 = Divisão\n0 = Sair\n")
     operacao=int(input("\nDigite digite qual será a operação: "))
     if operacao == 0:
@@ -26,4 +30,6 @@ while operacao != 0:
             else:
                 somatorio=somatorio+n1
     
-    print(f"Resultado da operação: {somatorio:0.2f}")
+    print(f"Resultado da operação: {somatorio:0.2f}\n")
+if operacao == 0:
+    print("Programa finalizado.")
