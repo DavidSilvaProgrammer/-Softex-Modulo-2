@@ -1,0 +1,29 @@
+
+#Faça uma função calculadora que os números e as operações serão feitas pelo usuário. O código deve ficar rodando infinitamente até que o usuário escolha a opção de sair. No início, o programa mostrará a seguinte lista de operações:
+#1: Soma
+#2: Subtração
+#3: Multiplicação
+#4: Divisão
+#0: Sair
+
+operacao=5 
+somatorio=0 
+quant_operacao=0
+contador=1
+
+while operacao != 0:
+    print("1 = Soma\n2 = Subtração\n3 = Multiplicação\n4 = Divisão\n0 = Sair\n")
+    operacao=int(input("\nDigite digite qual será a operação: "))
+    if operacao == 0:
+        break
+    if operacao == 1:
+        quant_operacao = int(input("Digite a quantidade de numeros que sera calculada na operação: \n"))
+        while contador <= quant_operacao:
+            n1 = float(input("Digite digite um número para operação: \n"))
+            contador+=1
+            if somatorio == 0:
+                somatorio=n1
+            else:
+                somatorio=somatorio+n1
+    
+    print(f"Resultado da operação: {somatorio:0.2f}")
