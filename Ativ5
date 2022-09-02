@@ -38,6 +38,24 @@ while operacao != 0:
                 resultado=n1
             else:
                 resultado=resultado-n1
+    elif operacao == 3:
+        quant_operacao = int(input("Digite a quantidade de numeros que sera calculada na operação: \n"))
+        while contador <= quant_operacao:
+            n1 = float(input("Digite digite um número para operação: \n"))
+            contador+=1
+            if contador == 2:
+                resultado=n1
+            else:
+                resultado=resultado*n1
+    elif operacao == 4:
+        quant_operacao = int(input("Digite a quantidade de numeros que sera calculada na operação: \n"))
+        while contador <= quant_operacao:
+            n1 = float(input("Digite digite um número para operação: \n"))
+            contador+=1
+            if contador == 2:
+                resultado=n1
+            else:
+                resultado=resultado/n1
     
     print(f"Resultado da operação: {resultado:0.2f}\n")
 if operacao == 0:
