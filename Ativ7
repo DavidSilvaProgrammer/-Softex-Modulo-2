@@ -37,16 +37,15 @@ while loop_votacao==False:
         elif voto == candidatos.branco.value:
             registro_votos[3]+=1
         else:
-            nulo+=1
-            print("Erro.")
-        print(f"Candidatos X: {registro_votos[0]}\nCandidatos Y: {registro_votos[1]}\nCandidatos Z: {registro_votos[2]\nBranco: registro_votos[3]}  Branco: {registro_votos[3]} Nulo: {registro_votos[4]}\n ")
+            registro_votos[4]+=1
+            print("\nVoto nulo\n.")
+        print(f"Candidatos X: {registro_votos[0]}\nCandidatos Y: {registro_votos[1]}\nCandidatos Z: {registro_votos[2]}\nBranco: {registro_votos[3]}\nNulo: {registro_votos[4]}\n ")
         
-        fim_votacao=int(input(\nDeseja continuar a votação? Digite 1 para continuar. 2 para encerrar:\n ))
-        if fim_votação == 2:
-            loop_votacao = True:
+        fim_votacao=int(input("\nDeseja continuar a votação? Digite 1 para continuar. 2 para encerrar:\n"))
+        if fim_votacao == 2:
+            loop_votacao = True
     except:
-        print("Erro. Digite novamente.")
-        print(f"Nulo: {nulo}\n Candidatos X: {registro_votos[0]}")
+        print("Digitação invalida. Digite novamente.")
         pass
         
     
