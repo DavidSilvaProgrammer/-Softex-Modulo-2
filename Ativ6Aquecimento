@@ -7,4 +7,6 @@ while intervalo_idade == False:
     ano_nasci=int(input("Digite o ano de seu nascimento:\nObs.: Só é aceito ano de nascimento entre 1922 e 2021.\n"))
     if ano_nasci >= 1922 and ano_nasci <= 2021:
         intervalo_idade=True
+    else:
+        print("Você digitou um ano de nascimento invalido.\nDigite um novo valor.")
 print(f"Seu ano de nascimento: {ano_nasci}\nSeu nome completo: {nome_completo}")
