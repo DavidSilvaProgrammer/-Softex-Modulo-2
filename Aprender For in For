@@ -1,0 +1,53 @@
+algoritmo "softex"
+var
+   i, j, contador : inteiro
+   nomeAluno, maiorNotaNome, maiorNotaEverNome : caracter
+   notaAluno, maiorNota, maiorNotaEver: real
+inicio
+
+      para i de 0 ate 3 faca
+           maiorNotaNome <- ""
+           maiorNota <- 0
+           contador <- 0
+           
+           para j de 0 ate 24 faca
+           
+                escreva("Digite o nome do ",j + 1,"º aluno: ")
+                leia(nomeAluno)
+                escreva("Digite a nota do ",j + 1,"º aluno: ")
+                leia(notaAluno)
+                
+                se (notaAluno >= 7) entao
+                   contador <- contador + 1
+                fimse
+                se (notaAluno > maiorNota) entao
+                   maiorNotaNome <- nomeAluno
+                   maiorNota <- notaAluno
+                fimse
+           
+           fimpara
+           
+           se (maiorNota > maiorNotaEver) entao
+              maiorNotaEver <- maiorNota
+              maiorNotaEverNome <- maiorNotaNome
+           fimse
+           
+           escolha (i)
+           caso 0
+                escreval("Na turma A ", contador, " alunos passaram")
+                escreval("O aluno com a maior nota foi ", maiorNotaNome , " com ", maiorNota, " pontos")
+           caso 1
+                escreval("Na turma B ", contador, " alunos passaram")
+                escreval("O aluno com a maior nota foi ", maiorNotaNome , " com ", maiorNota, " pontos")
+           caso 2
+                escreval("Na turma c ", contador, " alunos passaram")
+                escreval("O aluno com a maior nota foi ", maiorNotaNome , " com ", maiorNota, " pontos")
+           caso 3
+                escreval("Na turma D ", contador, " alunos passaram")
+                escreval("O aluno com a maior nota foi ", maiorNotaNome , " com ", maiorNota, " pontos")
+           fimescolha
+      fimpara
+      escreval("=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-")
+      escreval("O ALUNO COM A MAIOR NOTA DE TODAS FOI: ",maiorNotaEverNome," COM: ",maiorNotaEver," PONTOS")
+      escreval("=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-")
+fimalgoritmo
