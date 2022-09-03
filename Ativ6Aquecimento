@@ -1,0 +1,10 @@
+#Desenvolva um programa que recebe do usuário nome completo e ano de nascimento que seja entre 1922 e 2021.
+
+intervalo_idade=False
+
+while intervalo_idade == False:
+    nome_completo=input("Digite seu nome completo:\n")
+    ano_nasci=int(input("Digite o ano de seu nascimento:\nObs.: Só é aceito ano de nascimento entre 1922 e 2021.\n"))
+    if ano_nasci >= 1922 and ano_nasci <= 2021:
+        intervalo_idade=True
+print(f"Seu ano de nascimento: {ano_nasci}\nSeu nome completo: {nome_completo}")
