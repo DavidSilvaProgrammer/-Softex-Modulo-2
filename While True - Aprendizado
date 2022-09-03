@@ -1,0 +1,11 @@
+
+def Release() :
+    while True :
+        print 'Please select one of the following?\nCompletion = 0\nRelease ID = 1\nVersion ID = 2\nBuild ID = 3\n'
+        a = int(input("Please select the type of release required: "))
+        if 0 <= a < 4 :
+            files(a)
+            break
+        else :
+            print('Try Again')
+
