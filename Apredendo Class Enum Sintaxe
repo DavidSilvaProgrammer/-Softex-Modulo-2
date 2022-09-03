@@ -1,0 +1,9 @@
+from enum import IntEnum
+
+class Student(IntEnum):
+    Waiz = 1
+    Ali = 2
+    John = 3
+    Lee = 4
+
+print(Student.Lee.value)
