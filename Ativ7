@@ -48,5 +48,4 @@ while loop_votacao==False:
         print("Digitação invalida. Digite novamente.")
         pass
         
-    
         
