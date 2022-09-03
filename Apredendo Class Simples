@@ -1,4 +1,4 @@
 class Zoo:
     Lion, Tiger, Cheetah, Leopard  = range(1,5)
 
-print Zoo.Lion
+print (Zoo.Lion)
