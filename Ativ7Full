@@ -1,0 +1,63 @@
+#Desenvolva um código que simule uma eleição com três candidatos.
+#- candidato_X => 889
+#- candidato_Y => 847
+#- candidato_Z => 515
+#- branco => 0
+
+#O código deve perguntar se deseja finalizar a votação depois do voto. Caso o número do voto não corresponda a 
+#nenhum candidato ou seja branco, ele deve ser tratado como nulo. Se for inserido um texto ao invés de número, 
+#o código deve retornar uma mensagem para votar novamente.
+
+#Quando a votação for finalizada, o código deverá mostrar o vencedor, aquele com o maior número de votos e, 
+#também, a quantidade de votos de cada candidato, os brancos e nulos 
+
+#Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no 
+#campo ao lado para que outros desenvolvedores possam analisá-lo. 
+
+from enum import Enum
+
+class candidatos(Enum):
+    candidato_X=889
+    candidato_Y=847
+    candidato_Z=515
+    branco=0
+
+loop_votacao=False
+registro_votos=[0,0,0,0,0]
+
+while loop_votacao==False:
+    try:
+        voto=int(input("Digite o número do candidato que deseja votar:\n"))
+        if voto == candidatos.candidato_X.value:
+            registro_votos[0]+=1
+        elif voto == candidatos.candidato_Y.value:
+            registro_votos[1]+=1
+        elif voto == candidatos.candidato_Z.value:
+            registro_votos[2]+=1
+        elif voto == candidatos.branco.value:
+            registro_votos[3]+=1
+        else:
+            registro_votos[4]+=1
+            print("\nVoto nulo\n.")
+        print(f"Candidatos X: {registro_votos[0]}\nCandidatos Y: {registro_votos[1]}\nCandidatos Z: {registro_votos[2]}\nBranco: {registro_votos[3]}\nNulo: {registro_votos[4]}\n ")
+        
+        fim_votacao=int(input("\nDeseja continuar a votação? Digite 1 para continuar. 2 para encerrar:\n"))
+        if fim_votacao == 2:
+            print("Votação encerrada.")
+            if registro_votos[3] > registro_votos[0] and registro_votos[3] > registro_votos[1] and registro_votos[3] > registro_votos[2] and registro_votos[3] > registro_votos[4]:
+                print(f"A eleição teve em maior quantidade votos em branco: {registro_votos[3]} voto(s) em branco.\n")
+            if registro_votos[4] > registro_votos[0] and registro_votos[4] > registro_votos[1] and registro_votos[4] > registro_votos[2] and registro_votos[4] > registro_votos[3]:
+                print(f"A eleição teve em maior quantidade votos nulos: {registro_votos[4]} voto(s) nulos.\n")
+            if registro_votos[0] > registro_votos[1] and registro_votos[0] > registro_votos[2]:
+                print(f"O vencedor da votação foi: Candidato X com {registro_votos[0]} voto(s).\n")
+            elif registro_votos[1] > registro_votos[0] and registro_votos[1] > registro_votos[2]:
+                print(f"O vencedor da votação foi: Candidato Y com {registro_votos[1]} voto(s).\n")
+            elif registro_votos[2] > registro_votos[0] and registro_votos[2] > registro_votos[1]:
+                print(f"O vencedor da votação foi: Candidato Z com {registro_votos[2]} voto(s).\n")
+            else:
+                print("Houve um empate na votação:\n")
+            print(f"Registro de votos:\nCandidatos X: {registro_votos[0]}\nCandidatos Y: {registro_votos[1]}\nCandidatos Z: {registro_votos[2]}\nBranco: {registro_votos[3]}\nNulo: {registro_votos[4]}\n ")
+            loop_votacao = True
+    except:
+        print("Digitação invalida. Digite novamente.")
+        pass
