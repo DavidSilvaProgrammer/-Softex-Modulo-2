@@ -1,1 +1,7 @@
 import pandas as pd
+
+tabela=pd.read_csv('/content/sample_data/MediaAlunos - Página1.csv')
+tabela["Média"]=(tabela["nota1"]+tabela["nota2"])/2
+tabela.loc[tabela["Média"] >= 7, "Situação"] = "Aprovado"
+tabela.loc[tabela["Média"] < 7, "Situação"] = "Reprovado"
+print(tabela)
