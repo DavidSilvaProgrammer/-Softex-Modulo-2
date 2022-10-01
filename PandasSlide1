@@ -10,4 +10,20 @@
 #aluno_3 / 9 / 4
 #aluno_4 / 10 / 6
 
+#Solução:
 
+import pandas as pd
+
+ 
+
+df = pd.read_csv("notas_alunos.csv")
+
+media = (df["nota_1"] + df["nota_2"]) / 2
+
+if(media >= 7):
+
+   print("Aprovado")
+
+elif(media < 7):
+
+   print("Reprovado")
