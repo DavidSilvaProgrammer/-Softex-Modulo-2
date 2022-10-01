@@ -1,0 +1,13 @@
+#Problema: Uma escola precisa de um programa que leia as tabelas #de notas dos alunos, como a da imagem. Ajude essa escola e #crie um código que calcule a média do aluno e informe sua #situação acadêmica. Os critérios de aprovação são:
+#
+    #média maior ou igual a 7: “Aprovado”;
+#
+    #média menor que 7: “Reprovado”.
+
+#aluno / nota1 / nota2
+#aluno_1 / 7 / 10
+#aluno_2 / 3 / 10
+#aluno_3 / 9 / 4
+#aluno_4 / 10 / 6
+
+
