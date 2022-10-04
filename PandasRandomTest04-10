@@ -1,0 +1,8 @@
+import pandas as pd
+biscoito=pd.read_csv("/content/MediaAlunos - Página1.csv")
+
+biscoito['Média']=(biscoito['nota1']+biscoito['nota2'])/2
+biscoito.loc[biscoito['Média']>=7,"Estado"]="Aprovação"
+biscoito.loc[biscoito['Média']<7,"Estado"]="Reprovação"
+
+print(biscoito)
