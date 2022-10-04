@@ -9,9 +9,10 @@
 #- repetir a operação até que nenhuma troca possa ser feita no vetor inteiro.
 
 lista=[]
-for cont in range (0,9):
+for cont in range (0,10):
     lista.append(int(input(f'Digite o valor {cont+1}º da lista:\n')))
     
 
     
 print(lista)
+
