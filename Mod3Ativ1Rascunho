@@ -25,3 +25,5 @@ for c in range(1, 6):
     listaNumeros.append(int(input(f'Digite o {c}º valor: ')))
 
 print(bubble_sort(listaNumeros))
+
+https://pt.stackoverflow.com/questions/479816/como-ordenar-uma-lista-em-python
